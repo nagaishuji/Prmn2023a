@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-file_path = r"C:\Users\shuji\Prmn2023a\app\data\pokemon_data.xlsx"
+file_path = "/home/adminuser/Prmn2023a/app/pokemon_data.xlsx"
 df = pd.read_excel(file_path, sheet_name='Pokemon', index_col='id')
 
 st.title("ポケモン図鑑")
