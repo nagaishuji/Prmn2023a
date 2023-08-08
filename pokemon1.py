@@ -20,8 +20,8 @@ with st.form("my_form"):
             type_input = st.text_input("ポケモンのタイプを入力")
             selected_row = df[(df['タイプ1'] == type_input) | (df['タイプ2'] == type_input)]
         else:
-            type_input_1 = st.text_input("ポケモンのタイプ1を入力")
-            type_input_2 = st.text_input("ポケモンのタイプ2を入力")
+            type_input_1 = st.text_input("ポケモンのタイプ1つめを入力")
+            type_input_2 = st.text_input("ポケモンのタイプ2つめを入力")
             selected_row = df[
                 ((df['タイプ1'] == type_input_1) & (df['タイプ2'] == type_input_2)) |
                 ((df['タイプ1'] == type_input_2) & (df['タイプ2'] == type_input_1))
