@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-df = pd.read_excel('data/pokemon_data.xlsx', sheet_name='Pokemon', index_col='id')
+file_path = r"C:\Users\shuji\Prmn2023a\app\data\pokemon_data.xlsx"
+df = pd.read_excel(file_path, sheet_name='Pokemon', index_col='id')
 
 st.title("ポケモン図鑑")
 st.caption("ポケモンのいずれかの情報を入力してください")
