@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
-import openpyxl
 
-df = pd.read_excel('app/pokemon_data.xlsx', sheet_name='Pokemon', index_col='id')
+df = pd.read_csv('app/pokemon_data.csv', index_col='id')
 
 st.title("ポケモン図鑑")
 st.caption("ポケモンのいずれかの情報を入力してください")
