@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import openpyxl
 
 df = pd.read_excel('app/pokemon_data.xlsx', sheet_name='Pokemon', index_col='id')
 
