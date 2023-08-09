@@ -4,9 +4,7 @@ import pandas as pd
 df = pd.read_csv('data/pokemon_data.csv', index_col='id')
 
 st.title("ポケモン図鑑")
-st.caption("ポケモンのいずれかの情報を入力してください
-タイプは下記を参照
-           ノーマル、ほのお、みず、でんき、くさ、こおり、かくとう、どく、じめん、ひこう、エスパー、むし、いわ、ゴースト、ドラゴン、あく、はがね、フェアリー")
+st.caption("ポケモンのいずれかの情報を入力してください")
 
 # 検索方法の選択
 search_option = st.radio("検索方法を選択してください", ["図鑑番号", "名前", "タイプ"])
@@ -16,7 +14,7 @@ with st.form("my_form"):
     if search_option == "図鑑番号":
         number = st.number_input("ポケモンの図鑑番号(1～1010)を入力", min_value=1, max_value=1010)
     elif search_option == "タイプ":
-        type_option = st.radio("検索方法を選択してください", ["片方のタイプで検索", "両方のタイプで検索"])
+        type_option = st.radio("検索方法を選択してください(ノーマル、ほのお、みず、でんき、くさ、こおり、かくとう、どく、じめん、ひこう、エスパー、むし、いわ、ゴースト、ドラゴン、あく、はがね、フェアリー)", ["片方のタイプで検索", "両方のタイプで検索"])
 
         if type_option == "片方のタイプで検索":
             type_input = st.text_input("ポケモンのタイプを入力")
