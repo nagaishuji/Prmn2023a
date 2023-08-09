@@ -17,7 +17,8 @@ with st.form("my_form"):
         type_option = st.radio("検索方法を選択してください", ["片方のタイプで検索", "両方のタイプで検索"])
 
         if type_option == "片方のタイプで検索":
-            type_input = st.text_input("ポケモンのタイプを入力")
+            type_input = st.text_input("ポケモンのタイプを入力(ノーマル、ほのお、みず、でんき、くさ、こおり、かくとう、どく、
+                                                                じめん、ひこう、エスパー、むし、いわ、ゴースト、ドラゴン、あく、はがね、フェアリー)")
             selected_row = df[(df['タイプ1'] == type_input) | (df['タイプ2'] == type_input)]
         else:
             type_input_1 = st.text_input("ポケモンのタイプ1つめを入力")
