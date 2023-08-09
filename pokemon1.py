@@ -5,6 +5,8 @@ df = pd.read_csv('data/pokemon_data.csv', index_col='id')
 
 st.title("ポケモン図鑑")
 st.caption("ポケモンのいずれかの情報を入力してください")
+st.caption("タイプは下記を参照")
+st.caption("ノーマル、ほのお、みず、でんき、くさ、こおり、かくとう、どく、じめん、ひこう、エスパー、むし、いわ、ゴースト、ドラゴン、あく、はがね、フェアリー")
 
 # 検索方法の選択
 search_option = st.radio("検索方法を選択してください", ["図鑑番号", "名前", "タイプ"])
@@ -17,7 +19,7 @@ with st.form("my_form"):
         type_option = st.radio("検索方法を選択してください", ["片方のタイプで検索", "両方のタイプで検索"])
 
         if type_option == "片方のタイプで検索":
-            type_input = st.text_input("ポケモンのタイプを入力(ノーマル、ほのお、みず、でんき、くさ、こおり、かくとう、どく、じめん、ひこう、エスパー、むし、いわ、ゴースト、ドラゴン、あく、はがね、フェアリー)")
+            type_input = st.text_input("ポケモンのタイプを入力")
             selected_row = df[(df['タイプ1'] == type_input) | (df['タイプ2'] == type_input)]
         else:
             type_input_1 = st.text_input("ポケモンのタイプ1つめを入力")
